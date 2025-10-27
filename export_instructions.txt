@@ -1,0 +1,8 @@
+
+How to export capture as .pcap in Wireshark (GUI):
+1. Start Wireshark and capture on your active network interface.
+2. After capturing, go to File -> Save As...
+3. Choose format "pcap" or "pcapng" and pick a filename, e.g., synthetic_capture.pcap
+4. Click Save. The .pcap file is ready for submission.
+
+Tips: include screenshots showing the capture filters and the packet list for evidence.

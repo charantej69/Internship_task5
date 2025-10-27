@@ -1,0 +1,17 @@
+
+Useful commands and tips:
+
+# List interfaces (tshark)
+tshark -D
+
+# Capture for 60 seconds to a file (tshark)
+tshark -i 1 -a duration:60 -w synthetic_capture.pcap
+
+# Capture only HTTP and DNS (tshark capture filter)
+tshark -i 1 -a duration:60 -f "port 80 or port 53" -w synthetic_capture.pcap
+
+# Read/inspect pcap with tshark
+tshark -r synthetic_capture.pcap
+
+# Extract DNS packets only
+tshark -r synthetic_capture.pcap -Y "dns" -w dns_only.pcap

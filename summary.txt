@@ -1,0 +1,34 @@
+
+Wireshark Capture Project - Summary of Findings (Template)
+---------------------------------------------------------
+
+Filename: synthetic_capture.pcap
+Local path: Wireshark_Capture_Project/synthetic_capture.pcap
+
+1) Capture steps performed:
+- Interface used: <your active interface>
+- Duration: ~60 seconds
+- Actions to generate traffic: Browsed example.com, pinged 8.8.8.8, etc.
+
+2) Filters applied in Wireshark:
+- icmp
+- dns
+- http
+- tcp.port == 80
+
+3) Observed protocols (identify at least 3):
+- Protocol 1: e.g., ICMP  (count: <n>)
+- Protocol 2: e.g., DNS   (count: <n>)
+- Protocol 3: e.g., TCP/HTTP (count: <n>)
+
+4) Notable packets (include packet number and brief details):
+- Packet # : ICMP Echo (ping) from <src> to <dst>, length X bytes
+- Packet # : DNS Query for example.com from <src> to <dst>, QR=0
+- Packet # : TCP SYN from <src> to <dst>:80 (start of TCP handshake)
+- Packet # : HTTP GET request to / from <src> to <dst>
+
+5) Evidence and screenshots:
+- Place screenshots of filtered views into evidence_screenshots/ (e.g., icmp_filter.png, dns_filter.png, http_filter.png).
+
+6) Conclusion and recommendations:
+- e.g., No suspicious traffic observed. Recommend monitoring and using HTTPS for web traffic, etc.

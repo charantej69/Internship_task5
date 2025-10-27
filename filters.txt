@@ -1,0 +1,9 @@
+
+Wireshark Display Filters (examples):
+- icmp
+- dns
+- http
+- tcp
+- ip.addr == 192.168.1.100
+- tcp.port == 80
+- udp.port == 53

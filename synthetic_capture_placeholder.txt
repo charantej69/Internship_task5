@@ -1,0 +1,22 @@
+
+--- synthetic_capture_placeholder.txt ---
+
+This file is a placeholder because this environment cannot capture live network traffic.
+Follow these steps on your Windows/Linux/Mac computer to create the real capture and save it as 'synthetic_capture.pcap' inside this folder.
+
+Option A: Wireshark (GUI)
+1. Open Wireshark.
+2. Select your active network interface (e.g., Wi-Fi or Ethernet).
+3. Click Start to begin capturing.
+4. Generate traffic: open a website (http://example.com), and open a terminal and run: ping -c 4 8.8.8.8 (or 'ping 8.8.8.8' on Windows).
+5. After ~60 seconds, click Stop.
+6. File -> Save As -> choose "pcap" or "pcapng" and name it 'synthetic_capture.pcap' and save it into this project folder.
+7. Take screenshots of the Wireshark window showing the filters you used and save them into the evidence_screenshots folder.
+
+Option B: tshark (CLI)
+# Linux / macOS / Windows (with tshark installed):
+tshark -i 1 -a duration:60 -w synthetic_capture.pcap
+
+# Replace -i 1 with the correct interface number shown by `tshark -D`.
+# To capture only HTTP and DNS packets:
+tshark -i 1 -a duration:60 -f "port 80 or port 53" -w synthetic_capture.pcap
